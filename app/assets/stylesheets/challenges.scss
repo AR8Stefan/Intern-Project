@@ -12,8 +12,23 @@ NAVBAR
 GENERAL
 ***********************************************/
 
-body {
+.challenge-cards {
+	flex-wrap: flex;
+	justify-content: center;
+	text-align: center;
+	margin: 20px 10px;
+}
+
+.new-ch-btn {
 	align-content: center;
+	margin: 10px; 
+}
+
+/***********************************************
+HEADINGS
+***********************************************/
+
+h1 {
 	text-align: center;
 }
 
@@ -24,21 +39,52 @@ body {
 
 
 /***********************************************
-
-***********************************************/
-
-
-
-/***********************************************
-COLOURS
+COLOURS & FONTS
 ***********************************************/
 
 .navbar {
+	background-color: #EC5037; /*Orange*/
+	border-color: #EC5037;
+
+	&-nav__link {
+		color: #EBECEB;
+	}
+}
+
+.btn {
+	color: #EC5037;
+	border-color: #EC5037;
+	border-width: 2px;
+}
+
+.btn:hover {
 	background-color: #EC5037;
+	color: #EBECEB;
+	border-color: #EBECEB;
+}
+
+.btn-invert {
+	background-color: #EC5037;
+	color: #EBECEB;
+}
+
+.btn-invert:hover {
+	color: #EC5037;
+	background-color: #EBECEB;
 	border-color: #EC5037;
 }
 
+.navbar-default .navbar-nav li a {
+	color: #EBECEB; /*Offwhite or gray*/
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	color: #5ED1EB; /*Light blue*/
+}
+
 body {
-	color: #2D2D2D;
+	background-color: #6C68F4;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1rem
 }
 
