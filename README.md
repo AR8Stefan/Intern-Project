@@ -1,15 +1,20 @@
-# README
+# Coder Academy - Class Challenge App.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Ruby version
+Rails 5.0.4
 
-Things you may want to cover:
+### Gems Used
+gem 'devise'
+gem 'flexbox-sass'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'jquery-rails', '~> 4.3.1'
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
+### Setup:
+```
+$ git clone https://github.com/coder-academy/class-challenges.git
+$ cd <project name>
+$ bundle install
+```
 
 * Database creation
 
