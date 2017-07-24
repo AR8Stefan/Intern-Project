@@ -6,7 +6,10 @@
 NAVBAR
 ***********************************************/
 
-
+.navbar li {
+	font-size: 1.4rem;
+	text-align: center;
+}
 
 /***********************************************
 GENERAL
@@ -17,6 +20,32 @@ GENERAL
 	justify-content: center;
 	text-align: center;
 	margin: 20px 10px;
+}
+
+.field {
+	font-size: 1.2rem;
+	margin: 8px;
+}
+
+.edit-field {
+	text-align: center;
+}
+
+p {
+	text-align: center;
+	font-size: 1.2rem;
+}
+
+/***********************************************
+BUTTONS
+***********************************************/
+
+.btn {
+	margin: 5px;
+}
+
+.btn-invert {
+	margin: 0px;
 }
 
 .new-ch-btn {
@@ -30,6 +59,9 @@ HEADINGS
 
 h1 {
 	text-align: center;
+	font-weight: bold;
+	text-decoration: underline;
+	margin: 15px 0px;
 }
 
 /***********************************************
@@ -43,48 +75,87 @@ COLOURS & FONTS
 ***********************************************/
 
 .navbar {
-	background-color: #EC5037; /*Orange*/
+	background-color: #EC5037; /* Orange */
 	border-color: #EC5037;
 
 	&-nav__link {
-		color: #EBECEB;
+		color: #EBECEB; /* Offwhite/ light gray */
 	}
 }
 
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+	color: #EBECEB; /* Offwhite/ light gray */
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
+	color: #5ED1EB; /* Light blue */
+}
+
+.navbar-default .navbar-nav li a {
+	color: #EBECEB; /* Offwhite/ light gray */
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	color: #5ED1EB; /* Light blue */
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+	background-color: #EC5037; /* Orange */
+	color: #5ED1EB; /* Light blue */
+}
+
+.dropdown-menu {
+	background-color: #EC5037; /* Orange */
+	color: #5ED1EB; /* Light blue */	
+}
+
+.dropdown-menu li a:hover {
+	color: #EC5037; /* Orange */
+}
+
 .btn {
-	color: #EC5037;
-	border-color: #EC5037;
+	color: #EC5037; /* Orange */
+	border-color: #EC5037; /* Orange */
 	border-width: 2px;
 }
 
 .btn:hover {
-	background-color: #EC5037;
-	color: #EBECEB;
-	border-color: #EBECEB;
+	background-color: #EC5037; /* Orange */
+	color: #EBECEB; /* Offwhite/ light gray */
+	border-color: #EBECEB; /* Offwhite/ light gray */
 }
 
 .btn-invert {
-	background-color: #EC5037;
-	color: #EBECEB;
+	background-color: #EC5037; /* Orange */
+	color: #EBECEB; /* Offwhite/ light gray */
 }
 
 .btn-invert:hover {
-	color: #EC5037;
-	background-color: #EBECEB;
-	border-color: #EC5037;
-}
-
-.navbar-default .navbar-nav li a {
-	color: #EBECEB; /*Offwhite or gray*/
-}
-
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-	color: #5ED1EB; /*Light blue*/
+	color: #EC5037; /* Orange */
+	background-color: #EBECEB; /* Offwhite/ light gray */
+	border-color: #EC5037; /* Orange */
 }
 
 body {
-	background-color: #9CD3FF;
+	background-color: #9CD3FF; /* Change to preffered colour */
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1rem
 }
+
+/***********************************************
+MEDIA QUERIES
+***********************************************/
+
+@media (max-width : 767px) {
+	.navbar {
+		&-default-right__link:nth-of-type(1)
+		display: none;
+		}
+    }
+}
+
+@media (max-width : 767px) {
+	
+}
+
 
