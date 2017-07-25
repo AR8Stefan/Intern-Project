@@ -3,8 +3,8 @@
 </h1>
 
 <p>
-  <strong>Challenge:</strong>
-  <%= @challenge.text %>
+  <h2>Challenge:</h2> <br>
+  <p><%= @challenge.text %></p>
 </p>
 
 <% if teacher_signed_in? %>
@@ -12,5 +12,5 @@
 	<%= link_to 'Back', challenges_path, class: "btn btn-default" %>
 	<%= link_to 'Delete', @challenge, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default"%>
 <% else %>
-
+	<%= link_to 'Back', challenges_path, class: "btn btn-default" %>
 <% end %>

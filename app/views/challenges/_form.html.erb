@@ -12,13 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+    <p class="edit-title"><%= f.label :title %></p>
+    <div class="text-field"><%= f.text_field :title %></div>
   </div>
 
   <div class="field">
-    <%= f.label :text %>
-    <%= f.text_field :text %>
+    <p class="edit-title"><%= f.label :text %></p>
+    <div class="text-field"><%= f.text_field :text %></div>
   </div>
 
   <% if teacher_signed_in? %>

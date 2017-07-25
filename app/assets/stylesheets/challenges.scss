@@ -31,9 +31,13 @@ GENERAL
 	text-align: center;
 }
 
-p {
-	text-align: center;
-	font-size: 1.2rem;
+.panel-default {
+	padding-bottom: 8px;
+}
+
+.cards {
+	display: flex;
+	flex-wrap: wrap;
 }
 
 /***********************************************
@@ -54,14 +58,44 @@ BUTTONS
 }
 
 /***********************************************
-HEADINGS
+HEADINGS & Paragraphs
 ***********************************************/
 
 h1 {
 	text-align: center;
 	font-weight: bold;
+	font-size: 4.1rem;
 	text-decoration: underline;
 	margin: 15px 0px;
+	padding-bottom: 25px;
+}
+
+h2 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 2.5rem;
+}
+
+p {
+	text-align: center;
+	font-size: 1.2rem;
+	padding-top: 5px;
+	padding-bottom: 18px;
+}
+
+/*** Form Field Titles ***/
+
+.edit-title {
+	padding-bottom: 10px;
+}
+
+.text-field {
+	text-align: center;
+}
+
+input[type=text] {
+	width: 50%;
+	text-align: center;
 }
 
 /***********************************************
@@ -73,6 +107,8 @@ h1 {
 /***********************************************
 COLOURS & FONTS
 ***********************************************/
+
+/***** NAV *****/
 
 .navbar {
 	background-color: #EC5037; /* Orange */
@@ -88,7 +124,7 @@ COLOURS & FONTS
 }
 
 .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
-	color: #5ED1EB; /* Light blue */
+	color: #5ED1EB; /* Light blue/green */
 }
 
 .navbar-default .navbar-nav li a {
@@ -96,22 +132,24 @@ COLOURS & FONTS
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-	color: #5ED1EB; /* Light blue */
+	color: #5ED1EB; /* Light blue/green */
 }
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
 	background-color: #EC5037; /* Orange */
-	color: #5ED1EB; /* Light blue */
+	color: #5ED1EB; /* Light blue/green */
 }
 
 .dropdown-menu {
 	background-color: #EC5037; /* Orange */
-	color: #5ED1EB; /* Light blue */	
+	color: #5ED1EB; /* Light blue/green */	
 }
 
 .dropdown-menu li a:hover {
 	color: #EC5037; /* Orange */
 }
+
+/***** BUTTONS *****/
 
 .btn {
 	color: #EC5037; /* Orange */
@@ -136,19 +174,29 @@ COLOURS & FONTS
 	border-color: #EC5037; /* Orange */
 }
 
+/***** GENERAL *****/
+
 body {
-	background-color: #9CD3FF; /* Change to preffered colour */
+	background-color: #38A9C7; /* Change to preffered colour */
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1rem
+}
+
+p, h2 {
+	color: #EBECEB;
+}
+
+.panel-default {
+	background-color: #16657A; /* Orange */
 }
 
 /***********************************************
 MEDIA QUERIES
 ***********************************************/
 
-/*@media (min-width : 767px) {
-	.mobile-menu{
-		display: none;
+/*@media (min-width : 768px) {
+	.class {
+		color: red;
 	}
 }*/
 

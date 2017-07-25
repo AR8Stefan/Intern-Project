@@ -1,15 +1,17 @@
 <h1>Challenges</h1>
 
 <% if teacher_signed_in? %>
-  <div class="row challenge-cards">
+  <div class="row challenge-cards cards">
     <% @challenges.each do |challenge| %>
-      <div class="col-sm-12 col-md-4">
+    <div class="col-md-4">
+      <div class="col-sm-12 panel panel-default">
         <h2><%= challenge.title %></h2>
         <p><%= challenge.text %>5</p>
         <%= link_to 'View', challenge, class: "btn btn-default" %>
         <%= link_to 'Edit', edit_challenge_path(challenge), class: "btn btn-default"%>
         <%= link_to 'Delete', challenge, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default"%>
       </div>
+    </div>
     <% end %>
       <!-- /.col-md-4 -->
   </div>
@@ -17,13 +19,15 @@
     <%= link_to 'New Challenge', new_challenge_path, class: "btn btn-default new-ch-btn btn-invert" %>     
   <% else %>
 
-    <div class="row challenge-cards">
+    <div class="row challenge-cards cards">
     <% @challenges.each do |challenge| %>
-      <div class="col-sm-12 col-md-4">
+    <div class="col-md-4">
+      <div class="col-sm-12 panel panel-default">
         <h2><%= challenge.title %></h2>
         <p><%= challenge.text %>5</p>
         <%= link_to 'View Challenge', challenge, class: "btn btn-default" %>
       </div>
+    </div>
     <% end %>
       <!-- /.col-md-4 -->
   </div>
