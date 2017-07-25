@@ -146,16 +146,11 @@ body {
 MEDIA QUERIES
 ***********************************************/
 
-@media (max-width : 767px) {
-	.navbar {
-		&-default-right__link:nth-of-type(1)
+/*@media (min-width : 767px) {
+	.mobile-menu{
 		display: none;
-		}
-    }
-}
+	}
+}*/
 
-@media (max-width : 767px) {
-	
-}
 
 
