@@ -1,5 +1,7 @@
 <h1>Challenges</h1>
 
+<%= current_teacher.class.ancestors %>
+
 <% if teacher_signed_in? %>
   <div class="row challenge-cards cards">
     <% @challenges.each do |challenge| %>
