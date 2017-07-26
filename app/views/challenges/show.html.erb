@@ -2,10 +2,16 @@
   <%= @challenge.title %>
 </h1>
 
-<p>
-  <h2>Challenge:</h2> <br>
-  <p><%= @challenge.text %></p>
-</p>
+<div class="row challenge-cards cards">
+	<div class="container-fluid">
+	  <h2>Challenge:</h2> <br>
+	  <div class="col-md-12">
+	    <div class="col-sm-12 panel panel-default">
+	  		<p><%= @challenge.text %></p>
+	  	</div>
+	  </div>
+	</div>
+</div>
 
 <% if teacher_signed_in? %>
 	<%= link_to 'Edit', edit_challenge_path(@challenge), class: "btn btn-default" %>

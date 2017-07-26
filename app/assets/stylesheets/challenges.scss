@@ -38,6 +38,8 @@ GENERAL
 .cards {
 	display: flex;
 	flex-wrap: wrap;
+	word-wrap: break-word;
+	overflow: hidden;
 }
 
 /***********************************************
@@ -91,6 +93,19 @@ p {
 
 .text-field {
 	text-align: center;
+}
+
+.field {
+	max-width: 50%;
+	text-align: center;
+	align-content: center;
+	margin-top: 20px;
+}
+
+.center-block {
+    display: table;  /* Instead of display:block */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 input[type=text] {
