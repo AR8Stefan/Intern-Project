@@ -14,7 +14,11 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require turbolinks
+
+//= require jquery.raty
+//= require ratyrate
 //= require challenges
+
 //= require_tree .
 
 
