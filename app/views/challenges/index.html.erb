@@ -1,6 +1,6 @@
 <h1>Challenges</h1>
 
-<%= current_teacher.class.ancestors %>
+<%#= current_teacher.class.ancestors %>
 
 <% if teacher_signed_in? %>
   <div class="row challenge-cards cards">
@@ -8,7 +8,7 @@
     <div class="col-md-4">
       <div class="col-sm-12 panel panel-default">
         <h2><%= challenge.title %></h2>
-        <p><%= challenge.text %>5</p>
+        <p><%= challenge.text %></p>
         <%= link_to 'View', challenge, class: "btn btn-default" %>
         <%= link_to 'Edit', edit_challenge_path(challenge), class: "btn btn-default"%>
         <%= link_to 'Delete', challenge, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default"%>
@@ -26,7 +26,7 @@
     <div class="col-md-4">
       <div class="col-sm-12 panel panel-default">
         <h2><%= challenge.title %></h2>
-        <p><%= challenge.text %>5</p>
+        <p><%= challenge.text %></p>
         <%= link_to 'View Challenge', challenge, class: "btn btn-default" %>
       </div>
     </div>

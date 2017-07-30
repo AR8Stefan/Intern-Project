@@ -9,5 +9,7 @@ Rails.application.routes.draw do
 
   root 'challenges#index'
   devise_for :teachers, skip: [:registrations]
+
+  get 'tags/:tag', to: 'challenges#index', as: "tag"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

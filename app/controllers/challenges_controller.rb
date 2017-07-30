@@ -6,6 +6,12 @@ class ChallengesController < ApplicationController
   # GET /challenges.json
   def index
     @challenges = Challenge.all
+
+    if params[:tag]
+      @challenges = Challenge.tagged_with(params[:tag])
+    else
+      @challenges = Challenge.all
+    end
   end
 
   # GET /challenges/1
@@ -26,7 +32,7 @@ class ChallengesController < ApplicationController
   # POST /challenges.json
   def create
     @challenge = Challenge.new(challenge_params)
-
+    puts "##############{challenge_params.inspect}"
     respond_to do |format|
       if @challenge.save
         format.html { redirect_to @challenge, notice: 'Challenge was successfully created.' }
@@ -72,4 +78,9 @@ class ChallengesController < ApplicationController
     def challenge_params
       params.require(:challenge).permit(:title, :text)
     end
+
+    # Part of implementing tags for the challenges.
+    def post_params
+      params.require(:post).permit(:all_tags)
+end
 end
