@@ -33,7 +33,12 @@
       <div class="large-10 large-centered columns">
         <%= f.fields_for :tags do |tags_form| %>
           <%#= tags_form.text_field :name, placeholder: "Challenge tags", class: "form-control" %>
-          <%= f.text_field :tags, placeholder: "Challenge tags", class: "form-control" %>
+
+          <%#= f.text_field :tags, placeholder: "Challenge tags", class: "form-control", "data-role" => "tagsinput" %>
+
+            <!-- <input multiple="" placeholder="Enter tags" value="" data-role="tagsinput"  class="form-control"> -->
+
+            <%= f.text_field :tag_list %>
         <% end %>
       </div>
   </div>

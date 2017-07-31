@@ -32,7 +32,11 @@ class ChallengesController < ApplicationController
   # POST /challenges.json
   def create
     @challenge = Challenge.new(challenge_params)
-    @challenge.tag_list.add('TAGS!!!!')
+    # @challenge.tag_list.add('TAGS!!!!')
+    # @user.tag_list = "ruby, rails, html"
+    # @user.save
+    # @user.reload
+    # @user.tags
     # puts "##############{challenge_params.inspect}"
     respond_to do |format|
       if @challenge.save
@@ -81,7 +85,7 @@ class ChallengesController < ApplicationController
     end
 
     # Part of implementing tags for the challenges.
-    def post_params
-      params.require(:post).permit(:all_tags)
-end
+    # def post_params
+    #   params.require(:post).permit(:all_tags)
+    # end
 end

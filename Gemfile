@@ -26,6 +26,9 @@ gem 'coffee-rails', '~> 4.2'
 
 gem 'flexbox-sass'
 gem 'bootstrap-sass', '~> 3.3.6'
+
+gem 'twitter-typeahead-rails'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '~> 4.3.1'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
