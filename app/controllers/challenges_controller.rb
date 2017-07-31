@@ -32,7 +32,8 @@ class ChallengesController < ApplicationController
   # POST /challenges.json
   def create
     @challenge = Challenge.new(challenge_params)
-    puts "##############{challenge_params.inspect}"
+    @challenge.tag_list.add('TAGS!!!!')
+    # puts "##############{challenge_params.inspect}"
     respond_to do |format|
       if @challenge.save
         format.html { redirect_to @challenge, notice: 'Challenge was successfully created.' }
@@ -76,7 +77,7 @@ class ChallengesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def challenge_params
-      params.require(:challenge).permit(:title, :text)
+      params.require(:challenge).permit(:title, :text, :tag_list)
     end
 
     # Part of implementing tags for the challenges.

@@ -2,6 +2,8 @@ class Challenge < ApplicationRecord
 	ratyrate_rateable "rate"
 	has_many :tags
 	accepts_nested_attributes_for :tags
+	acts_as_taggable
+	acts_as_taggable_on :tags 
 
 	def tags=(names)
 	  self.tags = names.split(",").map do |name|
