@@ -38,7 +38,7 @@
 
             <!-- <input multiple="" placeholder="Enter tags" value="" data-role="tagsinput"  class="form-control"> -->
 
-            <%= f.text_field :tag_list, value: f.object.tag_list.to_s, class: "form-control", "data-role" => "tagsinput" %>
+            <span><%= f.text_field :tag_list, value: f.object.tag_list.to_s, class: "form-control tag-data", "data-role" => "tagsinput" %></span>
         <% end %>
       </div>
   </div>

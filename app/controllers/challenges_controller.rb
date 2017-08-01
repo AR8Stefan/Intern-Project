@@ -12,6 +12,12 @@ class ChallengesController < ApplicationController
     else
       @challenges = Challenge.all
     end
+
+    if params[:search]
+      @challenges = Challenge.search(params[:search]).order("created_at DESC")
+    else
+      @challenges = Challenge.all.order('created_at DESC')
+  end
   end
 
   # GET /challenges/1
@@ -32,12 +38,8 @@ class ChallengesController < ApplicationController
   # POST /challenges.json
   def create
     @challenge = Challenge.new(challenge_params)
-    # @challenge.tag_list.add('TAGS!!!!')
-    # @user.tag_list = "ruby, rails, html"
-    # @user.save
-    # @user.reload
-    # @user.tags
-    # puts "##############{challenge_params.inspect}"
+    @challenge.tag_list = @challenge.tag_list.to_s.split(" ")
+
     respond_to do |format|
       if @challenge.save
         format.html { redirect_to @challenge, notice: 'Challenge was successfully created.' }
