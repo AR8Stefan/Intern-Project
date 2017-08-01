@@ -8,6 +8,11 @@
 	  <div class="col-md-12">
 	    <div class="col-sm-12 panel panel-default">
 	  		<p><%= @challenge.text %></p>
+	  			<%= form_for :challenges do |f| %>
+		  			<%= f.fields_for :tags do |tags_form| %>
+		  				<span><%#= @challenge.tags %> <%= f.text_field :tag_list %></span>
+		  			<% end %>
+		  		<% end %>
 	  	</div>
 	  </div>
 	</div>

@@ -29,7 +29,7 @@
 
 <!-- Creates tags for challenge search -->
   <div class="row text-center field center-block">
-    <%= form_for :challenges do |f| %>
+    <%#= form_for :challenges do |f| %>
       <div class="large-10 large-centered columns">
         <%= f.fields_for :tags do |tags_form| %>
           <%#= tags_form.text_field :name, placeholder: "Challenge tags", class: "form-control" %>
@@ -38,7 +38,7 @@
 
             <!-- <input multiple="" placeholder="Enter tags" value="" data-role="tagsinput"  class="form-control"> -->
 
-            <%= f.text_field :tag_list %>
+            <%= f.text_field :tag_list, value: f.object.tag_list.to_s, class: "form-control", "data-role" => "tagsinput" %>
         <% end %>
       </div>
   </div>
@@ -48,5 +48,5 @@
         <%= f.submit class: "btn btn-default" %>
       </div>
     <% end %>
-  <% end %>
+  <%# end %>
 <% end %>
