@@ -6,6 +6,12 @@ class ChallengesController < ApplicationController
   # GET /challenges.json
   def index
     @challenges = Challenge.all
+
+    if params[:search]
+      @challenges = Challenge.tagged_with(params[:search])
+    else
+      @challenges = Challenge.all
+    end
   end
 
   # GET /challenges/1
@@ -26,6 +32,7 @@ class ChallengesController < ApplicationController
   # POST /challenges.json
   def create
     @challenge = Challenge.new(challenge_params)
+    @challenge.tag_list = @challenge.tag_list.to_s.split(" ")
 
     respond_to do |format|
       if @challenge.save
@@ -70,6 +77,11 @@ class ChallengesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def challenge_params
-      params.require(:challenge).permit(:title, :text)
+      params.require(:challenge).permit(:title, :text, :tag_list)
     end
+
+    # Part of implementing tags for the challenges.
+    # def post_params
+    #   params.require(:post).permit(:all_tags)
+    # end
 end

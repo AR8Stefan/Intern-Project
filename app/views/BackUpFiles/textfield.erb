@@ -1,0 +1,5 @@
+<%= form_for :challenges do |f| %>
+		  			<%= f.fields_for :tag_list do |tags_form| %>
+		  				<div><%= f.text_field :tag_list, class: "form-control tag-data label-primary", value: (@challenge.tag_list) %></div>
+		  			<% end %>
+		  		<% end %>

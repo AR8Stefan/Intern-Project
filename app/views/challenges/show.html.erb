@@ -8,18 +8,21 @@
 	  <div class="col-md-12">
 	    <div class="col-sm-12 panel panel-default">
 	  		<p><%= @challenge.text %></p>
+	  			
+		  	<% @challenge.tag_list.each do |tag| %>
+		  		<span class="label label-default"><%= tag %></span>
+	  		<% end %>
 	  	</div>
 	  </div>
 	</div>
 </div>
 
+Rate : <%= rating_for @challenge, 'rate', star: 5 %>
 
 <% if teacher_signed_in? %>
-Rate : <%= rating_for @challenge, 'rate', star: 5 %>
 	<%= link_to 'Edit', edit_challenge_path(@challenge), class: "btn btn-default" %>
 	<%= link_to 'Back', challenges_path, class: "btn btn-default" %>
 	<%= link_to 'Delete', @challenge, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default"%>
 <% else %>
-Rate : <%= rating_for @challenge, 'rate', star: 5 %>
 	<%= link_to 'Back', challenges_path, class: "btn btn-default" %>
 <% end %>
