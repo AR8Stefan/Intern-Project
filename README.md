@@ -41,4 +41,6 @@ gem 'ratyrate'
 ```
 #### Design Inspiration.
 
-The choice of colours came directly from the [Coder Academy Website](https://coderacademy.edu.au/) to go with the Coder Academy theme.
+The choice of colours came directly from the [Coder Academy Website](https://coderacademy.edu.au/) to go with the Coder Academy theme. 
+
+&copy;<sup>TM</sup>
