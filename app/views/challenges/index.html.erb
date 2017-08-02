@@ -2,11 +2,7 @@
 
 <%#= current_teacher.class.ancestors %>
 
-      <% if @tags.present? %>
-        <%= render @challenges.tag.name %>
-      <% else %>
-        <!-- <p>There are no posts containing the term(s) <%= params[:search] %>.</p> -->
-      <% end %>
+
 
 <% if teacher_signed_in? %>
   <div class="row challenge-cards cards">
@@ -17,7 +13,7 @@
         <p><%= challenge.text %></p>
 
         <% challenge.tag_list.each do |tag| %>
-          <span class="label label-default"><%= tag %></span>
+          <span class="label label-primary label-tags"><%= tag %></span>
         <% end %>
 
         <br>

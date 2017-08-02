@@ -32,12 +32,7 @@
     <%#= form_for :challenges do |f| %>
       <div class="large-10 large-centered columns">
         <%= f.fields_for :tags do |tags_form| %>
-          <%#= tags_form.text_field :name, placeholder: "Challenge tags", class: "form-control" %>
-
-          <%#= f.text_field :tags, placeholder: "Challenge tags", class: "form-control", "data-role" => "tagsinput" %>
-
-            <!-- <input multiple="" placeholder="Enter tags" value="" data-role="tagsinput"  class="form-control"> -->
-
+          <p>Use commas to separate tags.</p>
             <span><%= f.text_field :tag_list, value: f.object.tag_list.to_s, class: "form-control tag-data", "data-role" => "tagsinput" %></span>
         <% end %>
       </div>

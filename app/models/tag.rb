@@ -9,8 +9,8 @@ class Tag < ApplicationRecord
   end
 
   def self.search(search)
-  	where("name LIKE ?", "%#{search}%") 
-  	where("content LIKE ?", "%#{search}%")
+  	# where("name LIKE ?", "%#{search}%") 
+  	where("name || content LIKE ?", "%#{search}%")
 	end
 
 

@@ -7,17 +7,11 @@ class ChallengesController < ApplicationController
   def index
     @challenges = Challenge.all
 
-    if params[:tag]
-      @challenges = Challenge.tagged_with(params[:tag])
+    if params[:search]
+      @challenges = Challenge.tagged_with(params[:search])
     else
       @challenges = Challenge.all
     end
-
-    if params[:search]
-      @challenges = Challenge.search(params[:search]).order("created_at DESC")
-    else
-      @challenges = Challenge.all.order('created_at DESC')
-  end
   end
 
   # GET /challenges/1
