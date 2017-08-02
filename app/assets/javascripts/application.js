@@ -11,8 +11,6 @@
 // about supported directives.
 //
 
-//= require twitter/typeahead
-
 //= require jquery3
 //= require jquery_ujs
 //= require bootstrap-sprockets

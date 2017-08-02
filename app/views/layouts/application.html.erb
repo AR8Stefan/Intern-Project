@@ -19,13 +19,6 @@
     <%= render 'partials/nav' %>
       <div class="container">
 
-        <% if @tags.present? %>
-          <% redirect_to @challenges.tag.name %>
-          <%= render @challenges.tag.name.each %>
-        <% else %>
-        
-        <% end %>
-
 	    <%= yield %>
         
       </div>
