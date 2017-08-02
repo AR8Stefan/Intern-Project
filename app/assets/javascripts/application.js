@@ -11,6 +11,8 @@
 // about supported directives.
 //
 
+//= require ckeditor/init
+
 //= require jquery3
 //= require jquery_ujs
 //= require bootstrap-sprockets
