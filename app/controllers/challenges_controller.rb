@@ -43,6 +43,7 @@ class ChallengesController < ApplicationController
         format.json { render json: @challenge.errors, status: :unprocessable_entity }
       end
     end
+
   end
 
   # PATCH/PUT /challenges/1
