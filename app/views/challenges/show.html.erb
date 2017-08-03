@@ -1,41 +1,43 @@
-<h1>
-  <%= @challenge.title %>
-</h1>
+<div class="container container-fluid">
+	<div class="row challenge-cards cards">
+	  <div class="col-md-12 col-sm-12">
+	    <div class="container-fluid">
 
-<div class="row challenge-cards cards">
-	<div class="container-fluid">
-	  <h2>Challenge:</h2> <br>
-	  <div class="col-md-12">
-	    <div class="col-sm-12 panel panel-default">
-	  		<p><%= @challenge.body %></p>
-	  		<p><%= @challenge.text %></p>
+	    	<h2><%= @challenge.title %></h2>
 
-	  			
-		  	<% @challenge.tag_list.each do |tag| %>
-		  		<span class="label label-primary label-tags"><%= tag %></span>
-	  		<% end %>
+				<!-- Begin Time Stamp -->
+				<p class="timestamp">
+	        <% if @challenge.created_at > Time.now.beginning_of_day %>
+	          <%="#{time_ago_in_words(@challenge.created_at)} ago"%> <!-- 3 minutes ago, less than a minute ago  -->
+	        <% else %>
+	          <%= @challenge.created_at.strftime("%b %d, %Y") %> <!-- Month Date, Year -->
+	        <% end %>
+        </p>
+        <!-- End Time Stamp -->
 
 	  		<br>
 
-	  		<!-- Begin Time Stamp -->
-        <% if @challenge.created_at > Time.now.beginning_of_day %>
-          <%="#{time_ago_in_words(@challenge.created_at)} ago"%> <!-- 3 minutes ago, less than a minute ago  -->
-        <% else %>
-          <%= @challenge.created_at.strftime("%b %d, %Y") %> <!-- Month Date, Year -->
-        <% end %>
-        <!-- End Time Stamp -->
+	  		<p>Created By:<%= @teacher %></p>
+
+        <p class="timestamp">Rate : <%= rating_for @challenge, 'rate', star: 5 %></p>
+
+        <% @challenge.tag_list.each do |tag| %>
+		  		<span class="label label-primary label-tags"><%= tag %></span>
+	  		<% end %>
+
+	  		<p><%= @challenge.body %></p>
+	  		<!-- <p><%#= @challenge.text %></p> -->
 
 	  	</div>
 	  </div>
 	</div>
+
+	<% if teacher_signed_in? %>
+		<%= link_to 'Edit', edit_challenge_path(@challenge), class: "btn btn-default" %>
+		<%= link_to 'Back', challenges_path, class: "btn btn-default" %>
+		<%= link_to 'Delete', @challenge, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default"%>
+	<% else %>
+		<%= link_to 'Back', challenges_path, class: "btn btn-default" %>
+	<% end %>
 </div>
 
-Rate : <%= rating_for @challenge, 'rate', star: 5 %>
-
-<% if teacher_signed_in? %>
-	<%= link_to 'Edit', edit_challenge_path(@challenge), class: "btn btn-default" %>
-	<%= link_to 'Back', challenges_path, class: "btn btn-default" %>
-	<%= link_to 'Delete', @challenge, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default"%>
-<% else %>
-	<%= link_to 'Back', challenges_path, class: "btn btn-default" %>
-<% end %>
