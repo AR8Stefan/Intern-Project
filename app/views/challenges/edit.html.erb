@@ -5,7 +5,7 @@
 </div>
 
 <% if teacher_signed_in? %>
-	<%= link_to 'Show', @challenge, class: "btn btn-default" %>
+	<%= link_to 'View', @challenge, class: "btn btn-default" %>
 	<%= link_to 'Back', challenges_path, class: "btn btn-default" %>
 <% else %>
 	<%= link_to 'Back', challenges_path, class: "btn btn-default" %>

@@ -21,7 +21,7 @@
         <% if @challenge.created_at > Time.now.beginning_of_day %>
           <%="#{time_ago_in_words(@challenge.created_at)} ago"%> <!-- 3 minutes ago, less than a minute ago  -->
         <% else %>
-          <p class="timestamp"><%= @challenge.created_at.strftime("%b %d, %Y") %></p> <!-- Month Date, Year -->
+          <%= @challenge.created_at.strftime("%b %d, %Y") %> <!-- Month Date, Year -->
         <% end %>
         <!-- End Time Stamp -->
 
