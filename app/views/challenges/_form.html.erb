@@ -20,12 +20,20 @@
   </div>
 
   <div class="field center-block">
-    <!-- <p class="edit-title"><%= f.label :text %></p> -->
+    <div class="input-group text-field">
+      <div>
+        <%= f.cktext_area :body, class: "form-control", placeholder: "Raw text field" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="field center-block">
     <div class="input-group text-field">
       <span class="input-group-addon" id="sizing-addon2">Challenge:</span>
       <%= f.text_field :text, class: "form-control" %>
     </div>
   </div>
+
 
 <!-- Creates tags for challenge search -->
   <div class="row text-center field center-block">

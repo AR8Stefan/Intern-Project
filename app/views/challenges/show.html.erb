@@ -7,7 +7,9 @@
 	  <h2>Challenge:</h2> <br>
 	  <div class="col-md-12">
 	    <div class="col-sm-12 panel panel-default">
+	  		<p><%= @challenge.body %></p>
 	  		<p><%= @challenge.text %></p>
+
 	  			
 		  	<% @challenge.tag_list.each do |tag| %>
 		  		<span class="label label-primary label-tags"><%= tag %></span>

@@ -10,21 +10,21 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-
-//= require ckeditor/init
-
+//
+//
 //= require jquery3
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require turbolinks
 
+//= require ckeditor/init
 //= require jquery.raty
 //= require ratyrate
 //= require challenges
-
+//
 //= require_tree .
-
-
+//
+//
 // window.onload = function() {
 //     if (window.jQuery) {  
 //         // jQuery is loaded  

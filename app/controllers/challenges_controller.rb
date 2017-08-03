@@ -78,7 +78,7 @@ class ChallengesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def challenge_params
-      params.require(:challenge).permit(:title, :text, :tag_list)
+      params.require(:challenge).permit(:title, :text, :body, :tag_list)
     end
 
     # Part of implementing tags for the challenges.
