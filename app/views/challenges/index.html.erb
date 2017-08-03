@@ -1,9 +1,5 @@
 <h1>Challenges</h1>
 
-<%#= current_teacher.class.ancestors %>
-
-
-
 <% if teacher_signed_in? %>
   <div class="row challenge-cards cards">
     <% @challenges.each do |challenge| %>
@@ -35,7 +31,6 @@
 
     </div>
     <% end %>
-      <!-- /.col-md-4 -->
   </div>
   
     <%= link_to 'New Challenge', new_challenge_path, class: "btn btn-default new-ch-btn btn-invert" %>     
@@ -51,7 +46,6 @@
       </div>
     </div>
     <% end %>
-      <!-- /.col-md-4 -->
   </div>
 
   <% end %>

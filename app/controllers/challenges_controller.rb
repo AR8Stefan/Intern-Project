@@ -81,8 +81,4 @@ class ChallengesController < ApplicationController
       params.require(:challenge).permit(:title, :text, :body, :tag_list)
     end
 
-    # Part of implementing tags for the challenges.
-    # def post_params
-    #   params.require(:post).permit(:all_tags)
-    # end
 end
