@@ -1,32 +1,36 @@
 <div class="container container-fluid">
-	<div class="row challenge-cards cards">
+	<div class="row">
 	  <div class="col-md-12 col-sm-12">
-	    <div class="container-fluid">
+	    <div class="container-fluid challenges">
 
-	    	<h2><%= @challenge.title %></h2>
+	    	<h2 class="col-sm-offset-1"><%= @challenge.title %></h2>
+
+	    	<p class="col-sm-offset-1">Created By: <%= @teacher.name %></p>
 
 				<!-- Begin Time Stamp -->
-				<p class="timestamp">
+				<p class="col-sm-offset-1 timestamp">
 	        <% if @challenge.created_at > Time.now.beginning_of_day %>
 	          <%="#{time_ago_in_words(@challenge.created_at)} ago"%> <!-- 3 minutes ago, less than a minute ago  -->
 	        <% else %>
 	          <%= @challenge.created_at.strftime("%b %d, %Y") %> <!-- Month Date, Year -->
 	        <% end %>
-        </p>
-        <!-- End Time Stamp -->
+	    	</p>
+	    	<!-- End Time Stamp -->
 
 	  		<br>
 
-	  		<p>Created By:<%= @teachers %></p>
+	  		<div class="col-sm-offset-1">
+        	<p  class="timestamp">Rate Challenge: <%= rating_for @challenge, 'rate', star: 5 %></p>
+        </div>
 
-        <p class="timestamp">Rate : <%= rating_for @challenge, 'rate', star: 5 %></p>
+				<div class="col-sm-8">
+	        <% @challenge.tag_list.each do |tag| %>
+			  		<span class="label label-primary label-tags"><%= tag %></span>
+		  		<% end %>
 
-        <% @challenge.tag_list.each do |tag| %>
-		  		<span class="label label-primary label-tags"><%= tag %></span>
-	  		<% end %>
-
-	  		<p><%= @challenge.body %></p>
-	  		<!-- <p><%#= @challenge.text %></p> -->
+	  			<p><%= @challenge.body %></p>
+	  			<!-- <p><%#= @challenge.text %></p> If needed -->
+	  		</div>
 
 	  	</div>
 	  </div>

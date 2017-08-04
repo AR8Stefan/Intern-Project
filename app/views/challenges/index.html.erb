@@ -3,8 +3,8 @@
 <% if teacher_signed_in? %>
   <div class="row challenge-cards cards">
     <% @challenges.each do |challenge| %>
-    <div class="col-md-4 col-xs-12">
-      <div class=" panel panel-default">
+    <div class="col-xs-12 col-sm-6 col-md-4 flex-item">
+      <div class="panel panel-default">
         <h2><%= challenge.title %></h2>
         <p><%= challenge.text %></p>
 
@@ -15,11 +15,13 @@
         <br>
 
         <!-- Begin Time Stamp -->
-        <% if challenge.created_at > Time.now.beginning_of_day %>
-          <%="#{time_ago_in_words(challenge.created_at)} ago"%> <!-- 3 minutes ago, less than a minute ago  -->
-        <% else %>
-          <p class="timestamp"><%= challenge.created_at.strftime("%b %d, %Y") %></p> <!-- Month Date, Year -->
-        <% end %>
+        <p class="timestamp">
+          <% if challenge.created_at > Time.now.beginning_of_day %>
+            <%="#{time_ago_in_words(challenge.created_at)} ago"%> <!-- 3 minutes ago, less than a minute ago  -->
+          <% else %>
+            <%= challenge.created_at.strftime("%b %d, %Y") %> <!-- Month Date, Year -->
+          <% end %>
+        </p>
         <!-- End Time Stamp -->
 
         <br>
@@ -30,16 +32,18 @@
       </div>
 
     </div>
-    <% end %>
+  <% end %>
+
   </div>
-  
-    <%= link_to 'New Challenge', new_challenge_path, class: "btn btn-default new-ch-btn btn-invert" %>     
+
+  <%= link_to 'New Challenge', new_challenge_path, class: "btn btn-default new-ch-btn btn-invert" %> 
+        
   <% else %>
 
     <div class="row challenge-cards cards">
     <% @challenges.each do |challenge| %>
-    <div class="col-md-4">
-      <div class="col-sm-12 panel panel-default">
+    <div class="col-md-4 col-sm-12 flex-item">
+      <div class="panel panel-default">
         <h2><%= challenge.title %></h2>
         <p><%= challenge.text %></p>
         <%= link_to 'View Challenge', challenge, class: "btn btn-default" %>
@@ -48,4 +52,4 @@
     <% end %>
   </div>
 
-  <% end %>
+<% end %>

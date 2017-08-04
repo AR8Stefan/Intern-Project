@@ -12,7 +12,7 @@ NAVBAR
 }
 
 /***********************************************
-GENERAL
+CHALLENGES
 ***********************************************/
 
 .challenge-cards {
@@ -40,6 +40,10 @@ GENERAL
 	flex-wrap: wrap;
 	word-wrap: break-word;
 	overflow: hidden;
+}
+
+.flex-item {
+	
 }
 
 /***********************************************
@@ -73,16 +77,18 @@ h1 {
 }
 
 h2 {
-	text-align: center;
 	font-weight: bold;
 	font-size: 2.5rem;
 }
 
 p {
-	text-align: center;
 	font-size: 1.4rem;
 	padding-top: 5px;
 	padding-bottom: 18px;
+}
+
+.challenges h2 p {
+	float: left;
 }
 
 .label-tags {
@@ -91,6 +97,12 @@ p {
 	font-size: 1.2rem;
 	padding: 5px;
 	margin: 10px;
+}
+
+.timestamp {
+	font-size: 1rem;
+	padding-bottom: 0;
+	margin-bottom: 0;
 }
 
 /******** Form Field Titles ********/
@@ -135,7 +147,7 @@ input[type=text] {
 COLOURS & FONTS
 ***********************************************/
 
-/***** NAV *****/
+/********** NAV **********/
 
 .navbar {
 	background-color: #EC5037; /* Orange */
@@ -176,7 +188,7 @@ COLOURS & FONTS
 	color: #EC5037; /* Orange */
 }
 
-/***** BUTTONS *****/
+/********** BUTTONS **********/
 
 .btn {
 	color: #EC5037; /* Orange */
@@ -201,7 +213,7 @@ COLOURS & FONTS
 	border-color: #EC5037; /* Orange */
 }
 
-/***** GENERAL *****/
+/********** GENERAL **********/
 
 body {
 	background-color: #38A9C7; /* Change to preffered colour */
@@ -213,12 +225,6 @@ p, h2 {
 	color: #EBECEB;
 }
 
-.timestamp {
-	font-size: 1rem;
-	padding-bottom: 0;
-	margin-bottom: 0;
-}
-
 .panel-default {
 	background-color: #16657A; /* Orange */
 }
@@ -227,11 +233,18 @@ p, h2 {
 MEDIA QUERIES
 ***********************************************/
 
-/*@media (min-width : 768px) {
+/*As reference
+@media (min-width : 768px) {
 	.class {
 		color: red;
 	}
 }*/
+
+@media (min-width: 768px) {
+	.flex-item {
+		display: flex;
+	}
+}
 
 
 

@@ -17,6 +17,7 @@ class ChallengesController < ApplicationController
   # GET /challenges/1
   # GET /challenges/1.json
   def show
+    @teacher = current_teacher
   end
 
   # GET /challenges/new
