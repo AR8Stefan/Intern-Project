@@ -35,8 +35,10 @@ Student Features.
 #### Known Bugs
 
 - Star rating won't load.
-- Tags not styled correctly
+- Tags not styled correctly.
 - New challenge tag field not correctly styled.
+- Students cannot view a challenge.
+- Teacher cannot log out.
 
 ** If there are any more bugs or issues please contact me. ** 
 
