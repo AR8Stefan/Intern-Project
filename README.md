@@ -1,5 +1,7 @@
 # Coder Academy - Class Challenge App.
 
+[Coder Academy Challenge App](https://ca-challenge-app.herokuapp.com/challenges)
+
 ### Ruby version.
 Rails 5.0.4
 
@@ -30,15 +32,14 @@ Student Features.
 
 # Other Info.
 
-#### Gems Used.
-```
-gem 'devise'
-gem 'flexbox-sass'
-gem 'bootstrap-sass', '~> 3.3.6'
-gem 'jquery-rails', '~> 4.3.1'
-gem 'acts-as-taggable-on', '~> 4.0'
-gem 'ratyrate'
-```
+#### Known Bugs
+
+- Star rating won't load.
+- Tags not styled correctly
+- New challenge tag field not correctly styled.
+
+** If there are any more bugs or issues please contact me. ** 
+
 #### Design Inspiration.
 
 The choice of colours came directly from the [Coder Academy Website](https://coderacademy.edu.au/) to go with the Coder Academy theme. 
